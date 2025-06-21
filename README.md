@@ -19,30 +19,30 @@ PyContacts is a lightweight Flask web app that lets you manage contacts, organiz
 <hr>
 
 ## Setup Instructions
-1. **Clone the repository**
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/souviksn91/pycontacts.git
    cd pycontacts
    ```
 
-2. **Create a virtual environment**
+2. **Create a virtual environment:**
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
-3. **Install dependencies**
+3. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Configure database**
+4. **Configure database:**
     Create MySQL database (see DATABASE.md)
 
-5. **Run the app**
+5. **Run the app:**
    ```bash
    python app.py
    ```
-6. **Access in browser**
+6. **Access in browser:**
    http://127.0.0.1:5000/
    
