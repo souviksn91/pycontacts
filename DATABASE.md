@@ -14,7 +14,7 @@
     FLUSH PRIVILEGES;
     ```
 
-2. **Environment Variables**
+2. **Environment Variables**:
     Copy .env.example to .env and update with your credentials:
     ```ini
     SECRET_KEY=your_flask_secret_key
