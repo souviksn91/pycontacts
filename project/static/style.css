@@ -1,0 +1,344 @@
+/* fonts  */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* poppins font  */
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* colors used  */
+
+
+/* dark #0A2038  */
+
+
+/* blue #228CE0  */
+
+
+/* gray #869DB6 */
+
+
+/* lightgray #DAE1E8  */
+
+
+/* menu text  */
+
+.menu-txt {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #0A2038;
+    text-decoration: none;
+}
+
+
+/* link text blue  */
+
+.link-txt {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #228CE0;
+    text-decoration: none;
+}
+
+.link-txt:hover {
+    color: #0F6DB8;
+}
+
+
+/* heading text  */
+
+.heading-txt {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #0A2038;
+}
+
+
+/* contact text  */
+
+.contact-txt {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #0A2038;
+}
+
+
+/* dark text */
+
+.dark-txt {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #0A2038;
+}
+
+
+/* light text  */
+
+.light-txt {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #869DB6;
+}
+
+
+/* form placeholder text  */
+
+.form-txt {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #0A2038;
+    font-size: 16px;
+    height: 44px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: 1px solid #869DB6;
+    border-radius: 6px;
+}
+
+
+/* button text  */
+
+.bttn-txt {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #228CE0;
+    border: none;
+    border-radius: 6px;
+    height: 44px;
+    padding: 0 20px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.4s ease;
+}
+
+.bttn-txt:hover {
+    background-color: #0F6DB8;
+    color: #ffffff;
+}
+
+.bttn-txt:active {
+    background-color: #0F6DB8 !important;
+    color: #ffffff !important;
+}
+
+
+/* outline button text  */
+
+.outline-bttn-txt {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #0A2038;
+    background-color: #ffffff;
+    border: 1px solid #869DB6;
+    border-radius: 6px;
+    height: 44px;
+    padding: 0 20px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: border 0.4s ease;
+}
+
+.outline-bttn-txt:hover {
+    background-color: #fff;
+    border: 1px solid #0A2038;
+    color: #0A2038;
+}
+
+.outline-bttn-txt:active {
+    border: 1px solid #0A2038;
+    background-color: #fff !important;
+    color: #0A2038 !important;
+}
+
+
+/* outline button blue  */
+
+.outline-bttn-blue {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #228CE0;
+    background-color: #ffffff;
+    border: 1px solid #228CE0;
+    border-radius: 6px;
+    height: 44px;
+    padding: 0 20px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: border 0.4s ease;
+}
+
+.outline-bttn-blue:hover {
+    background-color: #fff;
+    border: 1px solid #0F6DB8;
+    color: #0F6DB8;
+}
+
+.outline-bttn-blue:active {
+    border: 1px solid #0F6DB8;
+    background-color: #fff !important;
+    color: #0F6DB8 !important;
+}
+
+.container-lg {
+    max-width: 1280px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+footer {
+    margin-top: auto;
+    /* pushes footer down */
+}
+
+.flash-messages {
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    z-index: 1000;
+}
+
+.flash-message {
+    background-color: #fff;
+    color: #0A2038;
+    border-width: 2px;
+    /* border: 1px solid #0A2038;  */
+}
+
+
+/* list bottom border  */
+
+.list-bottom-border {
+    border-bottom: 1px solid #DAE1E8 !important;
+}
+
+
+/* navbar bottom border */
+
+.nav-bottom-border {
+    border-bottom: 1px solid #869DB6 !important;
+    margin-bottom: 20px !important;
+}
+
+
+/* top and bottom navbar padding */
+
+.nav-top-bottom-padding {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+}
+
+.custom-footer {
+    border-top: 1px solid #869DB6;
+    margin-top: 60px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+
+/* pagination  */
+
+.custom-pagination .page-link {
+    color: #0A2038;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    /* background-color: #228CE0; */
+}
+
+.custom-pagination .page-link:hover {
+    background-color: #DAE1E8;
+}
+
+.custom-pagination .page-item.active .page-link {
+    color: #fff;
+    background-color: #228CE0;
+}
+
+.custom-pagination .page-item.disabled .page-link {
+    color: #869DB6;
+    pointer-events: none;
+}

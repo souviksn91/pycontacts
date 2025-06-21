@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+<!-- start block content  -->
+{% block content %}
+
+<!-- header  -->
+<div class="mt-4">
+    <h2 class="heading-txt">Browse by Group</h2>
+    <p class="dark-txt">Quickly view your contacts sorted by group.</p>
+</div>
+
+<!-- contact list -->
+<div class="d-flex flex-wrap gap-3 mt-4">
+    {% for category in categories %}
+    <a href="{{ url_for('group_contacts', category_id=category.id) }}" class="btn outline-bttn-blue">{{ category.name }} ({{ category.total_contacts }})</a> {% endfor %}
+</div>
+
+
+
+<!-- end of block content  -->
+{% endblock %}

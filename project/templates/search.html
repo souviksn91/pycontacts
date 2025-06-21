@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+<!-- start block content  -->
+{% block content %}
+
+<!-- header  -->
+<div class="mt-4">
+    <h2 class="heading-txt">Search Contacts</h2>
+    <p class="dark-txt">Find contacts by name, phone number, email.</p>
+</div>
+
+<!-- search form  -->
+<div class="mt-4" style="max-width: 600px;">
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <!-- CSRF token -->
+        <div class="mb-2">
+            {{ form.search.label(class="form-label dark-txt") }} {{ form.search(class="form-control form-txt", placeholder="Search by name, phone, or email..") }}
+        </div>
+        <button type="submit" class="btn bttn-txt mt-3">Search Contact</button>
+    </form>
+</div>
+
+
+<!-- total contact count -->
+{% if search_term %}
+<div class="mt-4" style="border-bottom: 1px solid #DAE1E8 !important;">
+    {% if total_results > 0 %}
+    <p class="dark-txt">Found {{ total_results }} matches for: <span style="font-weight: 700;">{{ search_term }}</span></p>
+    {% else %}
+    <p class="dark-txt">No matches found for: <span style="font-weight: 700;">{{ search_term }}</span></p>
+    {% endif %}
+</div>
+{% endif %}
+
+<!-- contact list with delete confirmation modal -->
+<div class="mt-4">
+    <!-- start of for loop  -->
+    {% for contact in results %}
+
+    <div class="mb-3 list-bottom-border" style="max-width: 600px;">
+        <div style="margin-bottom: -8px;">
+            <h5 class="contact-txt">{{ contact.first_name }} {{ contact.last_name }}</h5>
+            <p class="light-txt">
+                {{ contact.phone }} • {{ contact.email }} • {{ contact.category.name }}
+            </p>
+        </div>
+        <div class="pb-2">
+            <a href="{{ url_for('edit_contact', contact_id=contact.id) }}" class="link-txt me-2">Edit</a>
+            <a type="button" class="link-txt" data-bs-toggle="modal" data-bs-target="#deleteModal{{ contact.id }}">Delete</a>
+        </div>
+    </div>
+
+    <!-- delete confirmation modal  -->
+    <div class="modal fade" id="deleteModal{{ contact.id }}" tabindex="-1" aria-labelledby="deleteModalLabel{{ contact.id }}" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="border-bottom-color: #DAE1E8;">
+                    <h5 class="modal-title heading-txt" id="deleteModalLabel{{ contact.id }}">Delete Contact</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <p class="dark-txt">Are you sure you want to delete this contact? This action cannot be undone.</p>
+                </div>
+
+                <div class="modal-footer" style="border-top-color: #DAE1E8;">
+                    <button type="button" class="btn outline-bttn-txt" data-bs-dismiss="modal">Cancel</button>
+                    <form method="POST" action="{{ url_for('delete_contact', contact_id=contact.id) }}">
+                        <button type="submit" class="btn bttn-txt">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    <!-- end of for loop after modal  -->
+
+</div>
+
+
+
+
+<!-- end of block content  -->
+{% endblock %}

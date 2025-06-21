@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+<!-- start block content  -->
+{% block content %}
+
+<!-- header  -->
+<div class="mt-4">
+    {% if mode == 'add' %}
+    <h2 class="heading-txt">Add a New Contact</h2>
+    <p class="dark-txt">Fill out the details below to save a new contact.</p>
+    {% else %}
+    <h2 class="heading-txt">Edit Contact</h2>
+    <p class="dark-txt">Edit contact for: <span style="font-weight: 700;">{{ contact.first_name }} {{ contact.last_name }}</span></p>
+    {% endif %}
+</div>
+
+
+
+<!-- form  -->
+<div class="mt-4" style="max-width: 600px;">
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <!-- CSRF token -->
+
+        <div class="mb-2">
+            {{ form.first_name.label(class="form-label dark-txt") }} {{ form.first_name(class="form-control form-txt", placeholder="Please enter your first name") }}
+        </div>
+
+        <div class="mb-2">
+            {{ form.last_name.label(class="form-label dark-txt") }} {{ form.last_name(class="form-control form-txt", placeholder="Please enter your last name") }}
+        </div>
+
+        <div class="mb-2">
+            {{ form.phone.label(class="form-label dark-txt") }} {{ form.phone(class="form-control form-txt", placeholder="Please enter your phone number") }}
+        </div>
+
+        <div class="mb-2">
+            {{ form.email.label(class="form-label dark-txt") }} {{ form.email(class="form-control form-txt", placeholder="Please enter your valid email (e.g. you@example.com)") }}
+        </div>
+
+        <div class="mb-2">
+            {{ form.group.label(class="form-label dark-txt") }} {{ form.group(class="form-select form-txt") }}
+        </div>
+
+        <button type="submit" class="btn bttn-txt mt-3">Save Contact</button>
+
+    </form>
+</div>
+
+
+
+<!-- end of block content  -->
+{% endblock %}
