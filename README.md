@@ -3,7 +3,7 @@ PyContacts is a lightweight Flask web app that lets you manage contacts, organiz
 
 ![Image](https://github.com/user-attachments/assets/01ba76c1-1470-44fe-b5c8-7aef465998fe)
 
-#### Features
+## Features
 - Add, view, edit, and delete contacts
 - Organize contacts into groups (e.g. Family, Friends, Work)
 - Search for contacts by name, email, or phone
@@ -11,14 +11,14 @@ PyContacts is a lightweight Flask web app that lets you manage contacts, organiz
 - Clean and responsive interface using Bootstrap
 - MySQL support (easily configurable)
 
-#### Technologies
+## Technologies
 - **Backend:** Python, Flask, SQLAlchemy
 - **Frontend:** HTML, CSS, Bootstrap
 - **Database:** MySQL
 
 <hr>
 
-#### Setup Instructions
+## Setup Instructions
 1. **Clone the repository**
    ```bash
    git clone https://github.com/souviksn91/pycontacts.git
@@ -38,7 +38,7 @@ PyContacts is a lightweight Flask web app that lets you manage contacts, organiz
 
 4. **Configure database**
     Create MySQL database (see DATABASE.md)
-    
+
 5. **Run the app**
    ```bash
    python app.py
