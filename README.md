@@ -51,4 +51,5 @@ PyContacts is a lightweight Flask web app that lets you manage contacts, organiz
 <br>
 
 ---
+
 Author: **Souvik Sinha**
